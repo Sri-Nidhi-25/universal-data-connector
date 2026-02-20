@@ -6,7 +6,9 @@
 Build a production-quality **Universal Data Connector** using FastAPI that provides a unified interface for an LLM to access different data sources through function calling. The connector must be intelligent enough to identify data types, apply business rules, and optimize responses for voice conversations where bandwidth and latency matter.
 
 ### Business Context
+
 You're building this for a SaaS company where customers need to query their data (CRM, support tickets, analytics) through voice conversations with an AI assistant. The key constraints are:
+
 - Voice conversations require quick, concise responses (not massive data dumps)
 - Data must be contextually relevant and filtered
 - The LLM needs metadata to understand how to use each data source
@@ -17,6 +19,7 @@ You're building this for a SaaS company where customers need to query their data
 ## 📋 Requirements
 
 ### Core Functionality
+
 1. **FastAPI Server** with health checks and proper error handling
 2. **Multiple Data Connectors** (at least 3 types):
    - Customer CRM data
@@ -30,12 +33,14 @@ You're building this for a SaaS company where customers need to query their data
    - OpenAPI schema generation for function calling
    - Clear parameter validation
    - Structured responses with metadata
+
 5. **Data Type Detection & Handling**:
    - Identify whether data is tabular, time-series, hierarchical, etc.
    - Apply appropriate transformations
    - Include data freshness/staleness indicators
 
 ### Technical Requirements
+
 - Python 3.11+
 - FastAPI with Pydantic v2 models
 - Proper logging and error handling
@@ -45,7 +50,9 @@ You're building this for a SaaS company where customers need to query their data
 - Docker deployment ready
 
 ### Voice-Optimized Business Rules
+
 Implement rules like:
+
 - **Limit results**: Default max 10 items for voice
 - **Prioritization**: Return most recent/relevant first
 - **Summarization**: Aggregate metrics instead of raw data when appropriate
@@ -57,6 +64,7 @@ Implement rules like:
 ## 🏗️ Architecture
 
 ```
+
 universal-data-connector/
 ├── app/
 │   ├── main.py                 # FastAPI application entry point
@@ -107,6 +115,7 @@ universal-data-connector/
 ## 🎓 Learning Objectives
 
 By completing this exercise, you will demonstrate:
+
 1. **API Design**: Creating clean, RESTful APIs with FastAPI
 2. **Type Safety**: Using Pydantic models and Python type hints
 3. **Abstraction**: Building reusable base classes and interfaces
@@ -120,24 +129,28 @@ By completing this exercise, you will demonstrate:
 ## ✅ Evaluation Criteria
 
 ### Code Quality (30%)
+
 - Clean, readable code with proper structure
 - Type hints and Pydantic models used correctly
 - Comprehensive error handling
 - Logging throughout
 
 ### Functionality (30%)
+
 - All endpoints working correctly
 - Business rules properly implemented
 - Data filtering and optimization working
 - Mock data realistic and useful
 
 ### LLM Integration (20%)
+
 - OpenAPI schema properly generated
 - Function calling examples work
 - Responses optimized for voice
 - Good parameter validation
 
 ### Documentation (20%)
+
 - Clear README with setup instructions
 - Inline code comments where needed
 - API documentation (auto-generated + custom)
@@ -148,30 +161,35 @@ By completing this exercise, you will demonstrate:
 ## 🚀 Getting Started
 
 ### Phase 1: Setup (Day 1)
+
 1. Set up project structure
 2. Create base models and connector interface
 3. Implement mock data generators
 4. Get FastAPI running with health check
 
 ### Phase 2: Core Connectors (Days 2-3)
+
 1. Implement CRM connector
 2. Implement support ticket connector
 3. Implement analytics connector
 4. Add data type identification
 
 ### Phase 3: Business Rules (Day 4)
+
 1. Build business rules engine
 2. Implement voice optimizations
 3. Add pagination and filtering
 4. Test with sample queries
 
 ### Phase 4: LLM Integration (Day 5)
+
 1. Create function calling schemas
 2. Test with LLM (Claude or OpenAI)
 3. Optimize response formats
 4. Add metadata and context
 
 ### Phase 5: Polish (Day 6)
+
 1. Add comprehensive logging
 2. Write tests
 3. Create Docker setup
@@ -224,6 +242,7 @@ By completing this exercise, you will demonstrate:
 ## 🎉 Bonus Challenges (Optional)
 
 If you finish early and want to go further:
+
 1. Add caching layer (Redis) for frequently accessed data
 2. Implement rate limiting per data source
 3. Add streaming responses for large datasets
@@ -247,4 +266,4 @@ uvicorn app.main:app --reload
 docker-compose up --build
 ```
 
-Visit: http://localhost:8000/docs
+Visit: [http://localhost:8000/docs](http://localhost:8000/docs)

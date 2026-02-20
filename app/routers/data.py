@@ -9,8 +9,7 @@ from app.services.data_identifier import identify_data_type
 from app.models.common import DataResponse, Metadata
 import time
 from datetime import datetime
-
-router = APIRouter()
+router = APIRouter(tags=["Data"])
 logger = logging.getLogger(__name__)
 
 @router.get("/data/{source}", response_model=DataResponse)
