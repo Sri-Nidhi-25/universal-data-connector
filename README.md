@@ -1,6 +1,6 @@
 # 🚀 Universal Data Connector API
 
-An AI-powered backend system that integrates multiple data sources (CRM, Support, Analytics), applies intelligent summarization, and enables conversational insights using Groq LLM. Built for voice-optimized interactions with structured, voice-friendly response formats.
+An AI-powered backend system that integrates multiple data sources (CRM, Support, Analytics), applies intelligent summarization, and enables conversational insights using Ollama. Built for voice-optimized interactions with structured, voice-friendly response formats.
 
 ## 📌 Project Overview
 
@@ -9,7 +9,7 @@ Universal Data Connector is a production-ready FastAPI application that:
 - ✨ Connects to multiple structured data sources (CRM, Support, Analytics)
 - 🎯 Applies business rules and response optimization for voice conversations
 - 📊 Generates intelligent summaries automatically
-- 🤖 Provides AI-powered chat interaction through Groq LLM
+- 🤖 Provides AI-powered chat interaction through  LLM
 - 📈 Returns structured metadata with every response
 - 🔍 Automatically identifies and adapts to different data types (tabular, time-series, hierarchical)
 - 📱 Optimizes responses for low-latency voice contexts
@@ -27,14 +27,14 @@ The system is designed with clean architecture principles and is easily extendab
             │         │          │             │
             ▼         ▼          ▼             ▼
          Routers   Services   Connectors      LLM
-         (health,  (business,  (CRM,         (Groq)
+         (health,  (business,  (CRM,         (Ollama)
           data,    optimizer)  Support,        │ 
           chat)       │         Analytics)     │
             │         │         │              │
             └─────────┼─────────┼──────────────┘
                       │         │
                       ▼         ▼
-                    JSON   Groq API
+                    JSON   Ollama API
                Data Files       │
                       ┼─────────┼
                            │
@@ -52,7 +52,7 @@ The system is designed with clean architecture principles and is easily extendab
 
 - **FastAPI** - Modern, fast web framework for building APIs
 - **Pydantic** - Data validation using Python type annotations
-- **Groq LLM** - Fast, cost-efficient LLM for AI responses
+- **Ollama LLM** - Fast, cost-efficient LLM for AI responses
 - **Uvicorn** - Lightning-fast ASGI server
 - **Python 3.10+** - Modern Python with type hints
 - **Docker & Docker Compose** - Containerized deployment
@@ -65,7 +65,7 @@ The system is designed with clean architecture principles and is easily extendab
 ✅ **Smart Summarization Engine** - Aggregate metrics for voice contexts
 ✅ **Data Type Identification** - Automatic detection and handling
 ✅ **Metadata Generation** - Context awareness for LLM integration
-✅ **AI Integration (Groq)** - Seamless LLM-powered chat
+✅ **AI Integration (Ollama)** - Seamless LLM-powered chat
 ✅ **Logging & Error Handling** - Production-ready error management
 ✅ **Swagger Documentation** - Auto-generated API docs
 ✅ **Environment Configuration** - Secure config management
@@ -83,10 +83,10 @@ pip install -r requirements.txt
 Create a `.env` file in the project root:
 
 ```
-GROQ_API_KEY=your_api_key_here
+Ollama_API_KEY=your_api_key_here
 ```
 
-You can get your Groq API key from [Groq's console](https://console.groq.com).
+You can get your Ollama API key from [Ollama's console](https://console.Ollama.com).
 
 ### 3️⃣ Start Server
 
@@ -162,7 +162,7 @@ Fetch data from a specific source with optional filtering and optimization.
 
 **POST** `/chat`
 
-Get AI-powered insights using Groq LLM.
+Get AI-powered insights using Ollama LLM.
 
 **Request Body:**
 ```json
@@ -178,9 +178,9 @@ Get AI-powered insights using Groq LLM.
 }
 ```
 
-## 🧠 AI Provider: Groq
+## 🧠 AI Provider: Ollama
 
-This project uses **Groq API** for fast, intelligent responses:
+This project uses **Ollama API** for fast, intelligent responses:
 
 - **Model**: `llama-3.1-8b-instant`
 - **Latency**: Ultra-low latency perfect for voice interactions
@@ -331,7 +331,7 @@ D:\UNIVERSAL-DATA-CONNECTOR\UNIVERSAL-DATA-CONNECTOR
 4. Set up environment variables
    ```bash
    cp .env.example .env
-   # Edit .env and add your GROQ_API_KEY
+   # Edit .env and add your Ollama_API_KEY
    ```
 
 5. Run the application
