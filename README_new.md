@@ -5,7 +5,7 @@ You can copy this directly into `README.md`.
 
 # 🚀 Universal Data Connector API
 
-An AI-powered backend system that integrates multiple data sources (CRM, Support, Analytics), applies intelligent summarization, and enables conversational insights using Groq LLM.
+An AI-powered backend system that integrates multiple data sources (CRM, Support, Analytics), applies intelligent summarization, and enables conversational insights using Ollama LLM.
 
 ---
 
@@ -38,7 +38,7 @@ The system is designed with clean architecture principles and is easily extendab
         │                 │                 │
         │                 │          JSON Data Files
         │                 │
-        │           Groq LLM API
+        │           Ollama LLM API
         │
    Structured Response (Data + Summary + Metadata)
 ```
@@ -49,7 +49,7 @@ The system is designed with clean architecture principles and is easily extendab
 
 * FastAPI
 * Pydantic
-* Groq LLM
+* Ollama LLM
 * Uvicorn
 * Python 3.10+
 
@@ -68,7 +68,7 @@ pip install -r requirements.txt
 Create `.env`:
 
 ```
-GROQ_API_KEY=your_api_key_here
+Ollama_API_KEY=your_api_key_here
 ```
 
 ### 3️⃣ Start Server
@@ -162,7 +162,7 @@ Response:
 
 # 🧠 AI Provider
 
-This project uses **Groq API** with:
+This project uses **Ollama API** with:
 
 * Model: `llama-3.1-8b-instant`
 * Optimized for low latency
@@ -179,7 +179,7 @@ This project uses **Groq API** with:
 ✅ Smart summarization engine
 ✅ Data type identification
 ✅ Metadata generation
-✅ AI integration (Groq)
+✅ AI integration (Ollama)
 ✅ Logging
 ✅ Swagger documentation
 ✅ Environment configuration
