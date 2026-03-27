@@ -1,6 +1,6 @@
 # 🚀 Universal Data Connector API
 
-An AI-powered backend system that integrates multiple data sources (CRM, Support, Analytics), applies intelligent summarization, and enables conversational insights using Ollama. Built for voice-optimized interactions with structured, voice-friendly response formats.
+An AI-powered backend system that integrates multiple data sources (CRM, Support, Analytics), applies intelligent summarization, and enables conversational insights using Ollama. Built for voice-optimized interactions with structured, voice-friendly response formats. Click here to watch it in action - https://docs.google.com/videos/d/1qlV1_5_XLENCrLjV9BUQ3hUWgHfuGirgWZIwZmhOzjw/edit?usp=sharing
 
 ## 📌 Project Overview
 
